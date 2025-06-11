@@ -1,31 +1,57 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react'; // Optional: use Heroicons or any icon lib
 
 function App() {
+
+   const [isOpen, setIsOpen] = useState(false);
+  
   return (
 <>
  <div>
   {/* Navigation */}
-  <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between h-16">
-        <div className="flex items-center">
+   <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Nikky Classes
             </h1>
           </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#home" className="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+            <a href="#classes" className="text-gray-700 hover:text-blue-600 transition duration-300">Classes</a>
+            <a href="#staff" className="text-gray-700 hover:text-blue-600 transition duration-300">Our Team</a>
+            <a href="#results" className="text-gray-700 hover:text-blue-600 transition duration-300">Results</a>
+            <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Contact</a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 focus:outline-none">
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-        <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
-          <a href="#classes" className="text-gray-700 hover:text-blue-600 transition duration-300">Classes</a>
-          <a href="#staff" className="text-gray-700 hover:text-blue-600 transition duration-300">Our Team</a>
-          <a href="#results" className="text-gray-700 hover:text-blue-600 transition duration-300">Results</a>
-          <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Contact</a>
-        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden mt-2 space-y-2 pb-4">
+            <a href="#home" className="block text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#classes" className="block text-gray-700 hover:text-blue-600">Classes</a>
+            <a href="#staff" className="block text-gray-700 hover:text-blue-600">Our Team</a>
+            <a href="#results" className="block text-gray-700 hover:text-blue-600">Results</a>
+            {/* <div>
+                <a href="#contact" className="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contact</a>
+            </div> */}
+          </div>
+        )}
       </div>
-    </div>
-  </nav>
+    </nav>
   {/* Hero Section */}
   <section id="home" className="gradient-bg min-h-screen flex items-center pt-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +131,7 @@ function App() {
                 </svg>
                 <span className="text-gray-700">Math, Science, English, Social Studies</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center">     
                 <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
