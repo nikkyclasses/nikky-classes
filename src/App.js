@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // Optional: use Heroicons or any icon lib
+import user_img from "./images/download.png"
 
 function App() {
 
@@ -252,48 +253,48 @@ function App() {
         {/* Teacher 1 */}
         <div className="text-center card-hover">
           <div className="relative mb-6">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Rajesh Sharma" className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-blue-200" />
+            <img src={user_img} alt="Mr. Naveen Kuldeep" className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-blue-200" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">
               Mathematics
             </div>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Dr. Rajesh Sharma</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Mr. Naveen Kuldeep</h3>
           <p className="text-blue-600 font-semibold mb-3">Senior Mathematics Faculty</p>
-          <p className="text-gray-600 mb-4">12+ years experience • IIT Delhi Alumni • Expert in JEE Mathematics</p>
+          {/* <p className="text-gray-600 mb-4">12+ years experience • IIT Delhi Alumni • Expert in JEE Mathematics</p> */}
           <div className="flex justify-center space-x-4">
-            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">M.Tech IIT</span>
+            {/* <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">M.Tech IIT</span> */}
             <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">500+ Students</span>
           </div>
         </div>
         {/* Teacher 2 */}
         <div className="text-center card-hover">
           <div className="relative mb-6">
-            <img src="https://images.unsplash.com/photo-1494790108755-2616c2e9c999?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Priya Singh" className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-purple-200" />
+            <img src={user_img} alt="Deepak Kuldeep" className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-purple-200" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-1 rounded-full text-sm">
               Physics &amp; Chemistry
             </div>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Dr. Priya Singh</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Deepak Kuldeep</h3>
           <p className="text-purple-600 font-semibold mb-3">Science Faculty Head</p>
-          <p className="text-gray-600 mb-4">10+ years experience • NEET Expert • Research Background</p>
+          {/* <p className="text-gray-600 mb-4">10+ years experience • NEET Expert • Research Background</p> */}
           <div className="flex justify-center space-x-4">
-            <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Ph.D</span>
+            {/* <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Ph.D</span> */}
             <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">95% Results</span>
           </div>
         </div>
         {/* Teacher 3 */}
         <div className="text-center card-hover">
           <div className="relative mb-6">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mr. Amit Kumar" className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-green-200" />
+            <img src={user_img} alt="Vishwas Kuldeep" className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-green-200" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-1 rounded-full text-sm">
-              English &amp; Social Studies
+              English 
             </div>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Mr. Amit Kumar</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Vishwas Kuldeep</h3>
           <p className="text-green-600 font-semibold mb-3">Language &amp; Humanities Expert</p>
-          <p className="text-gray-600 mb-4">8+ years experience • Board Exam Specialist • Creative Teaching</p>
+          {/* <p className="text-gray-600 mb-4">8+ years experience • Board Exam Specialist • Creative Teaching</p> */}
           <div className="flex justify-center space-x-4">
-            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">M.A English</span>
+            {/* <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">M.A English</span> */}
             <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Award Winner</span>
           </div>
         </div>
